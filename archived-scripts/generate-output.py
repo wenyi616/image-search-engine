@@ -12,7 +12,6 @@ from sklearn.neighbors import NearestNeighbors
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from skimage import img_as_float
-from PIL import Image
     
 
 

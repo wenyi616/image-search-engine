@@ -190,7 +190,7 @@ for i in range(len(training_data)):
         if w not in word_dict:
             word_dict[w] = 0
 
-print(len(word_dict)) #7321
+print(len(word_dict)) #69
 # print(word_dict)
 print("****** Done building word dictionary ******")
 
@@ -233,7 +233,7 @@ print("****** Done loading images features ******")
 ##########################################################
 #     Model 
 ##########################################################
-clf = Ridge(alpha=0.5)
+clf = Ridge(alpha=1.0)
 clf.fit(training_vectors, training_label)
 clf_pred = clf.predict(testing_vectors)
 
@@ -243,4 +243,3 @@ print("\n**** Done Ridge ****")
 
 np.savetxt("./output/ridge_pred.csv",clf_pred, delimiter=",")
 print("\n**** Saving output ****")   
-
